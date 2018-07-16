@@ -1,0 +1,89 @@
+虚机配置
+
+配置IP：
+1：cd  /etc/network/interfaces.d
+2: vi etho.cfg
+    address  
+	gateway 192.168.55.254
+	
+3:配置git
+/etc/apt# vi sources.list
+/etc/init.d/ssh restart来启动ssh服务
+ifdown eth0
+ifup down eth0 
+route
+
+
+
+ 1、service network restart 2、rcnetwork restart 3、/etc/rc.d/network restart 
+
+ 
+ /etc/mysql/mysql.conf.d# vi mysqld.cnf
+
+
+
+--------------配置kestrel安装   
+
+kestrel 虚机密码：kx_neustor_@$^
+1：在em.properties 里修改IP和em,,mngIP值
+2：将数据库开启   /etc/init.d/mysql start
+烧sn号
+neucli3 device burn sn=K4036H1234567163
+
+
+
+重新刷需要设置： <security:intercept-url pattern="/**" access="hasIpAddress('${acl.allow}')" />
+
+
+查看版本信息
+cat /etc/.version
+
+
+
+盘的软连接
+cd /dev/disk/by-id/
+lsblk   --查看盘信息
+ln -s ../../sdb wwn-0x1234567801
+neucli3 disk usableList 挂载盘
+
+
+-----------------------------look sql exectue plan----------
+explain <sql语句>
+
+
+
+
+
+更新linux apt源  /etc/pack   更新sources.list文件
+
+
+
+
+
+
+
+
+
+apt install nodejs
+apt install npm
+apt-get install nodejs-legacy
+
+
+
+
+
+
+
+
+---------远程调用
+set JPDA_TRANSPORT=dt_socket
+set JPDA_ADDRESS=8000
+set JPDA_SUSPEND=y
+
+#exec "$PRGDIR"/"$EXECUTABLE" start "$@"
+exec "$PRGDIR"/"$EXECUTABLE" jpda start "$@"
+
+
+--处理lisence过期问题
+rm /etc/license.cetus /etc/.cetusfs.dat
+service cetusd restart

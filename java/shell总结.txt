@@ -1,0 +1,45 @@
+------------shell知识总结-------------
+定义变量不能有空格，且如果是查询语句  需要用反义字符``(tab键上面这个)
+---------------------------------
+=============dirname $0==================
+$0当前Shell程序的文件名
+dirname $0，获取当前Shell程序的路径
+cd `dirname $0`，进入当前Shell程序的目录
+
+
+============
+
+R B' R F2 R' B R F2 R2
+
+
+108.217   108.218 ----磁盘管理    raid
+
+G云2.0环境
+10.10.21.217  10.10.21.218  10.10.21.219  --用于goonie——master测试环境 
+
+v-if="this.$commonToken.hasManager()"
+
+1、主干合并分支
+
+进入分支，更新分支代码 
+（branch）git pull；
+切换主干 
+（branch）git checkout master；
+在主干上合并分支branch 
+（master）git merge branch –squash
+提交合并后的代码 
+（master）git commit -m ‘合并备注’
+将代码推送到远程仓库 
+（master）git push
+2、分支合并主干
+
+进入主干，更新主干代码 
+（master）git pull；
+切换分支 
+（master）git checkout branch；
+在分支上合并主干 
+（branch）git merge master –squash
+提交合并后的代码 
+（branch）git commit -m ‘合并备注’
+将代码推送到远程仓库 
+（branch）git push
